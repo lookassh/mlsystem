@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company>
+	<connection id="1001">
+		<connectionIP>192.168.150.170</connectionIP>
+		<databaseName>mlsystem_tech</databaseName>
+                <userType>5</userType>
+                <userName>m_pyzik</userName>
+
+	</connection>
+</company>
