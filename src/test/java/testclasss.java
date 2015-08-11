@@ -44,7 +44,7 @@ public class testclasss {
             List<TechProcess> techproc = new ArrayList<>();
             techproc.add(new TechProcess(tech, techProcessDictionary));
 
-            TechnologyManager tttI = ctx.getBean(TechnologyManagerImpl.class);
+            TechnologyManager tttI = ctx.getBean(TechnologyManager.class);
             tttI.getTechnologyByName("test");
 
          //rdao.readFileConfiguration(rdao.getDoc().getChildNodes());
