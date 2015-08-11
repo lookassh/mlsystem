@@ -28,9 +28,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @author Marcin
  */
 public class testclasss {
+    
     public static void main( String[] args ) throws Exception{
         //ReadXMLFileDAO rdao = new ReadXMLFileDAOImpl();
         //rdao.setFileName("configIP.xml");
+            ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
             
             Technology tech = new Technology();
             tech.setTechDescription("pierwsza");
@@ -42,11 +44,12 @@ public class testclasss {
             List<TechProcess> techproc = new ArrayList<>();
             techproc.add(new TechProcess(tech, techProcessDictionary));
 
-            TechnologyManager tttI = new TechnologyManagerImpl();
+            TechnologyManager tttI = ctx.getBean(TechnologyManagerImpl.class);
             tttI.getTechnologyByName("test");
 
          //rdao.readFileConfiguration(rdao.getDoc().getChildNodes());
         //System.out.println("lol" + rdao.getDoc().getChildNodes());
         throw new Exception("koniec");
     }
+    
 }
